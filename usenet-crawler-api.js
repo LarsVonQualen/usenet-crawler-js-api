@@ -22,8 +22,6 @@ var apiCall = function apiCall(options) {
 
     options.url = buildUrl((settings.secure ? "https:" : "http:"), "//www.usenet-crawler.com/api/?apikey=", settings.apiKey, "&o=json&", encodeURI(options.url));
 
-    console.log("CALLING: " + options.url);
-
     options.contentType = options.contentType || "application/json";
 
     var d = defer();

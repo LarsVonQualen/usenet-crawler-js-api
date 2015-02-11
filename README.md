@@ -2,11 +2,17 @@
 
 Behold the glorious JS API for working with the usenet-crawler.com api!
 
+I'm in the business of fixing issues, so if you find anything, let me know!
+
 ### Install
 `npm install usenet-crawler-js-api`
 
 ### Usage
 `var api = require("usenet-crawler-js-api");`
+
+### Testing
+Place a file text file called `api.key` in the spec folder containing just your API key.
+
 
 ### API Interface
 ```javascript

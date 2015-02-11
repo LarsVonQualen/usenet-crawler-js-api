@@ -28,3 +28,4 @@ node_modules
 .lock-wscript
 irlTestCase.js
 irlWebTestCase.js
+spec/api.key
