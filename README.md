@@ -4,6 +4,8 @@ Behold the glorious JS API for working with the usenet-crawler.com api!
 
 I'm in the business of fixing issues, so if you find anything, let me know!
 
+[![NPM](https://nodei.co/npm/usenet-crawler-js-api.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/usenet-crawler-js-api.png?downloads=true&downloadRank=true&stars=true)
+
 ### Install
 `npm install usenet-crawler-js-api`
 
