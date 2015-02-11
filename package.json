@@ -1,0 +1,24 @@
+{
+  "name": "usenet-crawler-js-api",
+  "version": "1.0.0",
+  "description": "Implementation of the usenet-crawler.com api in node",
+  "main": "usenet-crawler-api.js",
+  "scripts": {
+    "test": "jasmine-node spec/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/LarsVonQualen/usenet-crawler-js-api.git"
+  },
+  "author": "Lars von Qualen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LarsVonQualen/usenet-crawler-js-api/issues"
+  },
+  "homepage": "https://github.com/LarsVonQualen/usenet-crawler-js-api",
+  "dependencies": {
+    "djax": "^1.0.2",
+    "xmlhttprequest": "^1.7.0",
+    "q": "^1.1.2"
+  }
+}
