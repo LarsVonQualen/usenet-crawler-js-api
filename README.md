@@ -9,7 +9,7 @@ Behold the glorious JS API for working with the usenet-crawler.com api!
 `var api = require("usenet-crawler-js-api");`
 
 ### API Interface
-```json
+```javascript
 {
     searchFor: {
         query: function query(q, asc) {},
