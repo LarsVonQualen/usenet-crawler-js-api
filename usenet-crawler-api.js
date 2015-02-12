@@ -29,11 +29,11 @@ var apiCall = function apiCall(options) {
     if (options.returnsXml) { console.log(options) }
 
     djax(options).done(function (data) {
-	if (options.notArray) {
+    	if (options.notArray) {
         	d.resolve(data);
-	} else {
-		d.resolve(data.channel.item);
-	}
+    	} else {
+    		d.resolve(data.channel.item);
+    	}
     }).fail(function (xhr) {
         if (xhr.status === 200) {
             d.resolve({
@@ -64,7 +64,7 @@ module.exports.setting = function setting(key, value) {
 
 module.exports.getCapabilities = function capabilities() {
     return apiCall({
-	notArray: true,
+        notArray: true,
         url: buildUrl("t=caps")
     });
 };
@@ -72,21 +72,25 @@ module.exports.getCapabilities = function capabilities() {
 module.exports.user = {
     register: function register(email) {
         return apiCall({
+            notArray: true,
             url: buildUrl("t=register&email=", email)
         });
     },
     profile: function profile(username) {
         return apiCall({
+            notArray: true,
             url: buildUrl("t=user&username=", username)
         });
     },
     addNzbToCart: function addNzbToCart(nzbId) {
         return apiCall({
+            notArray: true,
             url: buildUrl("t=cartadd&id=", nzbId)
         });
     },
     deleteNzbFromCart: function deleteNzbFromCart(nzbId) {
         return apiCall({
+            notArray: true,
             url: buildUrl("t=cartdel&id=", nzbId)
         });
     }
@@ -156,12 +160,14 @@ module.exports.searchFor = {
 
 module.exports.getNfo = function getNfo(nzbId) {
     return apiCall({
+        notArray: true,
         url: buildUrl("t=getnfo&raw=1&id=", nzbId)
     });
 };
 
 module.exports.getNzb = function getNfo(nzbId) {
     return apiCall({
+        notArray: true,
         url: buildUrl("t=get&id=", nzbId)
     });
 };
