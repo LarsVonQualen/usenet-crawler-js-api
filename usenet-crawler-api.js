@@ -29,7 +29,11 @@ var apiCall = function apiCall(options) {
     if (options.returnsXml) { console.log(options) }
 
     djax(options).done(function (data) {
-        d.resolve(data.channel.item);
+	if (options.notArray) {
+        	d.resolve(data);
+	} else {
+		d.resolve(data.channel.item);
+	}
     }).fail(function (xhr) {
         if (xhr.status === 200) {
             d.resolve({
@@ -60,6 +64,7 @@ module.exports.setting = function setting(key, value) {
 
 module.exports.getCapabilities = function capabilities() {
     return apiCall({
+	notArray: true,
         url: buildUrl("t=caps")
     });
 };
