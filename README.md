@@ -22,7 +22,10 @@ Place a file text file called `api.key` in the spec folder containing just your 
     searchFor: {
         query: function query(q, asc) {},
         tv: function tv(q, season, episode) {},
-        movie: function movies(imdbId, asc) {},
+        movie: {
+            byQuery: function movies(q, asc) {},
+            byImdb: function movies(imdbId, asc) {}
+        },
         musicBy: {
             artist: function artist(artist) {},
             album: function album(album) {},

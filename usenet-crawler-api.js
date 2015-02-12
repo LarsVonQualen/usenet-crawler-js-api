@@ -104,13 +104,20 @@ module.exports.searchFor = {
     },
     tv: function tv(q, season, episode) {
         return apiCall({
-            url: buildUrl("t=tv&q=", q, "&season=", season, "&ep=", episode)
+            url: buildUrl("t=tv&q=", q, (season !== undefined ? "&season=" + season : ""), (episode !== undefined ? "&ep=" + episode : ""))
         });
     },
-    movie: function movies(imdbId, asc) {
-        return apiCall({
-            url: buildUrl("t=movie&imdbid=", q, "&sort=pubDate_", (asc === true ? "asc" : "desc"))
-        });
+    movie: {
+        byQuery: function byQuery(q, asc) {
+            return apiCall({
+                url: buildUrl("t=movie&q=", q, "&sort=pubDate_", (asc === true ? "asc" : "desc"))
+            });
+        },
+        byImdb: function byImdb(imdbId, asc) {
+            return apiCall({
+                url: buildUrl("t=movie&imdbid=", imdbId, "&sort=pubDate_", (asc === true ? "asc" : "desc"))
+            });
+        }
     },
     musicBy: {
         artist: function artist(artist) {
