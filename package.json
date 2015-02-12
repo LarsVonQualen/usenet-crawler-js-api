@@ -1,6 +1,6 @@
 {
   "name": "usenet-crawler-js-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Implementation of the usenet-crawler.com api in node",
   "main": "usenet-crawler-api.js",
   "scripts": {
